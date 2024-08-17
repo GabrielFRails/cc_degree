@@ -1,0 +1,102 @@
+function f1
+def
+enddef
+return ci10
+end
+
+function f2 pi1
+def
+var vi1
+var vi2
+var vi3
+enddef
+return pi1
+end
+
+function f3 pi1 pi2
+def
+var vi1
+vet va2 size ci10
+enddef
+vi1 = ci3
+vi1 = pi1 - pi2
+if pi1
+get va2 index ci8 to vi1
+endif
+if pi2
+get va2 index ci5 to pi1
+endif
+if ci10
+get va2 index ci2 to pi2
+endif
+set va2 index ci9 with pi2
+return ci10
+end
+
+function f4 pa1
+def
+var vi1
+var vi2
+vet va3 size ci30
+enddef
+get pa1 index ci2 to vi2
+set va3 index ci7 with vi1
+set pa1 index ci2 with vi2
+vi1 = vi2 + ci6
+vi1 = vi2 - ci1
+vi1 = vi2 * ci2
+vi2 = call f1 vi1 va3
+vi2 = call f1 ci5 pa1
+return vi2
+end
+
+function f5 pi1 pa2
+def
+var vi1
+var vi2
+var vi3
+vet va4 size ci5
+enddef
+vi1 = vi2 / ci2
+vi2 = pi1 / vi1
+get pa2 index ci3 to vi3
+vi3 = vi3 / pi1
+pi1 = pi1 / vi3
+get va4 index ci3 to vi3
+vi1 = vi2 / vi3
+return vi1
+end
+
+function f6 pi1 pi2
+def
+var vi1
+var vi2
+enddef
+vi2 = call f2 pi2
+return vi1
+end
+
+function f7 pi1 pi2
+def
+var vi1
+vet va2 size ci10
+enddef
+vi1 = ci3
+vi1 = pi1 - pi2
+if pi1
+get va2 index ci8 to vi1
+endif
+if pi2
+get va2 index ci5 to pi1
+endif
+if ci10
+get va2 index ci2 to pi2
+endif
+if vi1
+get va2 index ci2 to pi1
+endif
+if va2
+get va2 index ci2 to pi1
+endif
+return ci10
+end
