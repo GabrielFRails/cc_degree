@@ -1,0 +1,2 @@
+O algoritmo Inserction-sort fará 499 comparações no máximo em um vetor
+com 500 elementos.

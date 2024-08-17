@@ -1,0 +1,15 @@
+resultado de 10 * '10' =>  100
+10 == '10' => true
+10 === '10' => false
+
+isNaN(null) =>  false
+isNaN(true) =>  false
+isNaN(false) =>  false
+isNaN(undefined) =>  true
+
+g:  { nome: 'fulano', idade: 20 } tipo de g:  object
+h:  [ 1, 2, 3 ] tipo de h:  object
+tipo de 'a': number
+10
+tipo de 'a': string
+abc

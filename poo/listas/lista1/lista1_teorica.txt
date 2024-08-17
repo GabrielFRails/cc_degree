@@ -1,0 +1,22 @@
+1a) É um paradigma de programação voltado para análise, projeto e programação de sistemas de software baseado na abstração, composição e interação de camadas de código baseadas em elementos da vida real.
+
+1b) A priori declaramos uma classe, definimos seus métodos e construtor a partir de uma análise do que queremos que esse objeto represente da vida real.
+Por exemplo, criamos a classe Pessoa, definimos seus atributos como nome, idade, restrições alimentares etc. Depois criamos métodos/funções que abstraem seus corpomentos da vida real, como andar, correr, dormir, etc.
+
+1c) Uma abstração da realidade. Ora, podemos com os recursos da linguagens criar classes que represeta determinados contextos da vida real, criando nelas atributos e métodos que representam com a melhor fidelidade possível as características e comportamentos do objeto escolhido para representar em código.
+
+1d) Um método é, nada mais, nada menos do que uma obstração de comportamento ou característica de um objeto da realidade. Por exemplo, criamos a classe "retângulo" e definimos que ela terá o método "CalcularArea", recebendo como entrada sua base e altura, e retornando de saída a área final com o cálculo "base x altura".
+
+2) Temos 4 modificadores de acesso, sendo eles:
+- public: Os membros (atributos e métodos) de uma classe declarada como pública podem ser acessados a partir de outras classes de outros pacotes, caso esses também forem declarados como públicos.
+
+- private: Os membros de uma classe declarados como private não podem ser acessados por outras instâncias. Esse modificador não se aplica a classes, somente a métodos e atributos.
+
+- protected: Outro exemplo de modificador que só pode ser usado em membros de classe. Membros declarados como protected só podem ser acessados por classes do mesmo pacote java ou então por meio de herança. Contudo, esse acesso por herança é somente via classes declaradas no mesmo pacote.
+
+- default (padrão): Caso nenhuma das opções acima tenha sido usada ao declarar uma classe,essa será tida como default, ou seja, a classe e/ou seus membros podem ser acessados somente por classes do mesmo pacote.
+
+3 a) Uma associação entre classes define que os objetos de determinada classe estão conectados de outra classe.
+3 b) Generalização: é um tipo de associação em que classes são combinadas em uma só. Criando uma classe mais genérica, podemos fazer com que suas propriedades sejam "herdadas" por outras classes mais especialistas. Cria-se então uma relação de "B é um tipo de A", em que A é uma superclasse e B uma subclasse. Um exemplo disso seria uma classe que realiza as operações básicas de uma banco de dados, como abrir, manter e fechar conexão com o banco e fazer operações get e put, outras classes mais específicas herdam essa para evitar re-escrita desnecessária de código no sistema.
+
+4 a) É "esconder" métodos e atributos que não convém liberar para acesso externo, podendo representar rotinas e características. Seu principal objetivo é impedir acesso direto a esses atributos, colocando como alternativa métodos para validar e realizar alterações. Escondendo os detalhes das implementações, o desenvolvedor consegue focar no trabalho em um nível mais alto de abstração.

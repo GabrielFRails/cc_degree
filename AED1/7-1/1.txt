@@ -1,0 +1,4 @@
+Porquê independente da quantidade de elementos o algoritmo irá vasculhar o vetor em busca do menor
+elemento para enfim alocá-lo na posição inicial da devida iteração um número N-1 vezes, sendo N
+o número de elementos do vetor a ser ordenado, portanto, sua eficiência é a mesma independentemente
+da quantidade de elementos do vetor.

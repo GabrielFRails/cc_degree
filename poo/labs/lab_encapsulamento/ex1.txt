@@ -1,0 +1,9 @@
+1. A palavra-chave "final" especifica que uma variável não é modificável.
+
+2. O modificador de acesso "default" em um atributo indica que ele está visível para todas as classes e objetos do mesmo pacote.
+
+3. O modificador de acesso "public" em um atributo indica que ele está visível para todas as classes e objetos do projeto, mesmo fora do pacote.
+
+4. Um atributo "static", tem seu valor compartilhado entre todos os objetos da classe, sendo também chamado de Variável de Classe.
+
+5. Definir um método público "static" para um atributo privado é uma maneira de encapsular a informação, garantindo que seu acesso seja controlado pelo desenvolvedor da classe.

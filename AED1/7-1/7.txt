@@ -1,0 +1,3 @@
+Em um vetor ordenado em ordem crescente, o algoritmo Inserction Sort
+realiza menos operações e realiza a ordenação em menos tempo, portanto
+nesse caso Inserction sort é mais recomendado que o selection sort.
