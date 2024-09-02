@@ -17,7 +17,7 @@ checkTriangulo a b c =
     else True
 
 -- ex4
--- metadeLista :: [Int] -> 
+metadeLista :: [Int] -> [[Int]]
 metadeLista lista = [take size lista, drop size lista]
     where
         l = length lista
@@ -50,12 +50,12 @@ max3 a b c =
     else if b > c then b
     else c
 
-min3 a b c =
+min3n a b c =
     if a < b then
-            if a < c then a
-            else c
-        else if b < c then b
-        else c    
+        if a < c then a
+        else c
+    else if b < c then b
+    else c    
 
 -- 8a
 
