@@ -1,4 +1,5 @@
 -- exs basicos
+-- Gabriel Freitas | Matrícula: 202003564
 
 min3:: Int -> Int-> Int -> Int
 min3 a b c =
