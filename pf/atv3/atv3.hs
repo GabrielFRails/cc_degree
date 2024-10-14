@@ -31,3 +31,7 @@ mult i j = add (mult i (pred j)) i
 	= add (add (add (mult i i) i) i) i
 	= add (add (add i i) i) i = i*4
 -}
+
+exp' i 0 = 1
+exp' i 1 = i
+exp' i j = mult (exp' i (pred j)) i
