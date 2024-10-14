@@ -22,7 +22,7 @@ add i j = succ (add i (pred j))
 mult i 0 = 0
 mult i 1 = i
 
--- fazer (add i 1) j vezes
+-- fazer (add i i) j vezes
 mult i j = add (mult i (pred j)) i
 
 {-
@@ -35,3 +35,26 @@ mult i j = add (mult i (pred j)) i
 exp' i 0 = 1
 exp' i 1 = i
 exp' i j = mult (exp' i (pred j)) i
+
+-- a próxima função será divisão
+
+-- b)
+foldi :: (a -> a) -> a -> Integer -> a
+foldi f q 0 = q
+foldi f q i = f (foldi f q (pred i))
+
+add' :: Integer -> Integer -> Integer
+add' i j = foldi (+1) i j
+
+mult' :: Integer -> Integer -> Integer
+mult' i j = foldi (+i) 0 j
+
+exp'' :: Integer -> Integer -> Integer
+exp'' i j = foldi (*i) i (j-1)
+
+-- c)
+-- n primeiro numeros de fibofibonacci
+fibonacci :: Integer -> Integer
+fibonacci n = fst (foldi step (0, 1) n)
+  where
+    step (a, b) = (b, a + b)
