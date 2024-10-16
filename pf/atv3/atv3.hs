@@ -58,3 +58,7 @@ fibonacci :: Integer -> Integer
 fibonacci n = fst (foldi step (0, 1) n)
   where
     step (a, b) = (b, a + b)
+
+-- ex 3
+scanl' f z [] = [z]
+scanl' f z list = scanl' f z (init list) ++ [foldl f z list]
