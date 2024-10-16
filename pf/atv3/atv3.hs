@@ -59,6 +59,17 @@ fibonacci n = fst (foldi step (0, 1) n)
   where
     step (a, b) = (b, a + b)
 
+fatorial :: Integer -> Integer
+fatorial n = fst (foldi step (1, 2) (n-1))
+  where
+    step (a, b) = (a*b, b+1)
+
+{-
+	foldi f 1 5 = f (foldi f 1 (pred 5)) = f (foldi f 1 4) = f (f (foldi f 1 3)) = f (f (f (foldi f 1 2)))
+	= f (f (f (f (foldi f 1 1)))) = f (f (f (f (f (foldi f 1 0)))))
+	= f (f (f (f (f (1))))) = 
+-}
+
 -- ex 3
 scanl' f z [] = [z]
 scanl' f z list = scanl' f z (init list) ++ [foldl f z list]
