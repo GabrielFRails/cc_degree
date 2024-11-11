@@ -1,7 +1,6 @@
 -- binaries tree's
 
-data Arv a = No a (Arv a) (Arv a)
-    | Vazia
+data Arv a = Vazia | No a (Arv a) (Arv a) deriving Show
 
 listar :: Arv a -> [a]
 listar Vazia = []
@@ -43,6 +42,34 @@ mais_dir :: Arv a -> a
 mais_dir (No x _ Vazia) = x
 mais_dir (No _ _ dir) = mais_dir dir
 
+remover :: Ord a => a -> Arv a -> Arv a
+remover x Vazia = Vazia -- n˜ao ocorre
+remover x (No y Vazia dir) -- um descendente
+    | x==y = dir
+remover x (No y esq Vazia) -- um descendente
+    | x==y = esq
+remover x (No y esq dir) -- dois descendentes
+    | x<y = No y (remover x esq) dir
+    | x>y = No y esq (remover x dir)
+    | x==y = let z = mais_esq dir
+        in No z esq (remover z dir)
+
+remover' :: Ord a => a -> Arv a -> Arv a
+remover' x Vazia = Vazia -- n˜ao ocorre
+remover' x (No y Vazia dir) -- um descendente
+    | x==y = dir
+remover' x (No y esq Vazia) -- um descendente
+    | x==y = esq
+remover' x (No y esq dir) -- dois descendentes
+    | x<y = No y (remover' x esq) dir
+    | x>y = No y esq (remover' x dir)
+    | x==y = let z = mais_dir esq
+        in No z (remover' z esq) dir
+
+toList :: Arv a -> [a]
+toList Vazia = []
+toList (No x esq dir) = toList esq ++ [x] ++ toList dir
+
 main :: IO ()
 main = do
     let minhaArvore = construir [1,2,3,4,5,6,7]
@@ -61,3 +88,12 @@ main = do
 
     let elementoMaisDir = mais_dir minhaArvore
     putStrLn $ "Elemento mais a direita: " ++ show elementoMaisDir
+
+    print $ toList minhaArvore
+
+    let novaArv = remover 4 minhaArvore
+    print $ toList novaArv
+
+    let novaArv' = remover' 4 minhaArvore
+    print $ toList novaArv'
+    
