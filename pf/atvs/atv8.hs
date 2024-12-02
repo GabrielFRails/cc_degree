@@ -33,3 +33,6 @@ member x (Set tree) = memberTree x tree
         | x <  y = memberTree x left
         | x >  y = memberTree x right
         | x == y = True
+
+-- 3
+-- union, intersect, difference :: Ord a ⇒ Set a → Set a → Set a
